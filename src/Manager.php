@@ -161,7 +161,7 @@ class Manager
             foreach ($values as $languageKey => $value) {
                 $filePath = $this->path."/{$languageKey}/{$fileName}.php";
 
-                Arr::set($appends[$filePath], $key, $value);
+                Arr::set($appends[$filePath], $key, ($value)?:$key);
             }
         }
 
